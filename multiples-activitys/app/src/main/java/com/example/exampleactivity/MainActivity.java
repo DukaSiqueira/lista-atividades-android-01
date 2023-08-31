@@ -14,7 +14,6 @@ import com.example.exampleactivity.model.Aluno;
 public class MainActivity extends AppCompatActivity {
 
     private Button btCadastrarAluno;
-    private TextView tvAlunosCadastrados;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btCadastrarAluno = findViewById(R.id.btCadastrarAluno);
-        tvAlunosCadastrados = findViewById(R.id.tvAlunosCadastrados);
 
         btCadastrarAluno.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,17 +34,6 @@ public class MainActivity extends AppCompatActivity {
     private void abrirCadastroAluno() {
         Intent intent = new Intent(this, CadastroAlunoActivity.class);
         startActivity(intent);
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        String texto = "";
-
-        for (Aluno aluno : Controller.getInstance().retornarAlunos()) {
-            texto += "R.A.: " + aluno.getRa() + " Nome: " + aluno.getNome() + "\n";
-        }
-        tvAlunosCadastrados.setText(texto);
     }
 
 }

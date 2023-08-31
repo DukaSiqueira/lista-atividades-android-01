@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.exampleactivity.model.Aluno;
 
@@ -15,6 +17,9 @@ public class CadastroAlunoActivity extends AppCompatActivity {
 
     private EditText edRaAluno, edNomeAluno;
 
+    private TextView tvAlunosCadastrados;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +28,9 @@ public class CadastroAlunoActivity extends AppCompatActivity {
         btSalvar = findViewById(R.id.btSalvar);
         edNomeAluno = findViewById(R.id.edNome);
         edRaAluno = findViewById(R.id.edRa);
+        tvAlunosCadastrados = findViewById(R.id.tvAlunosCadastrados);
 
+        this.atualizarListaAlunos();
 
         btSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +59,17 @@ public class CadastroAlunoActivity extends AppCompatActivity {
 
         Controller.getInstance().salvarAluno(aluno);
 
+        Toast.makeText(this, "Aluno cadastrado com sucesso", Toast.LENGTH_SHORT).show();
+
         this.finish();
+    }
+
+    private void atualizarListaAlunos() {
+        String texto = "";
+
+        for (Aluno aluno : Controller.getInstance().retornarAlunos()) {
+            texto += "R.A.: " + aluno.getRa() + " Nome: " + aluno.getNome() + "\n";
+        }
+        tvAlunosCadastrados.setText(texto);
     }
 }

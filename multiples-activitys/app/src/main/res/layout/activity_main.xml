@@ -25,13 +25,4 @@
         android:text="Cadastrar aluno"
         android:id="@+id/btCadastrarAluno"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10sp"
-        android:layout_marginStart="10sp"
-        android:layout_marginEnd="10sp"
-        android:textSize="20sp"
-        android:id="@+id/tvAlunosCadastrados"/>
-
 </LinearLayout>
