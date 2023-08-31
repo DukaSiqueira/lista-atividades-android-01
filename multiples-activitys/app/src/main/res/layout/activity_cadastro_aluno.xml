@@ -41,6 +41,38 @@
         android:hint="Informe o nome do aluno"
         android:id="@+id/edNome"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5sp"
+        android:text="CPF:"
+        android:textSize="25sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5sp"
+        android:layout_marginEnd="5sp"
+        android:inputType="phone"
+        android:hint="Informe o CPF do aluno"
+        android:id="@+id/edCpf"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5sp"
+        android:text="Data Nascimento:"
+        android:textSize="25sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5sp"
+        android:layout_marginEnd="5sp"
+        android:inputType="text"
+        android:hint="Informe a data de nascimento do aluno"
+        android:id="@+id/edDataNascimento"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
