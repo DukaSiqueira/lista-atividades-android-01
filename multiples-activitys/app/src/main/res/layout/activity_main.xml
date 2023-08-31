@@ -16,13 +16,32 @@
         android:text="Cadastro de turmas"
         android:textSize="25dp" />
 
-    <Button
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="Cadastrar aluno"
-        android:id="@+id/btCadastrarAluno"/>
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Cadastrar aluno"
+            android:layout_weight="1"
+            android:id="@+id/btCadastrarAluno"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Cadastrar professor"
+            android:layout_weight="1"
+            android:id="@+id/btCadastrarProfessor"/>
+
+    </LinearLayout>
 </LinearLayout>

@@ -60,7 +60,7 @@ public class CadastroAlunoActivity extends AppCompatActivity {
         }
 
         if (edDataNascimento.getText().toString().isEmpty()) {
-            edDataNascimento.setError("Informe o CPF do aluno!");
+            edDataNascimento.setError("Informe a data de nascimento do aluno!");
             return;
         }
 
