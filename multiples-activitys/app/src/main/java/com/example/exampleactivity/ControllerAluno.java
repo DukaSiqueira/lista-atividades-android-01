@@ -4,22 +4,22 @@ import com.example.exampleactivity.model.Aluno;
 
 import java.util.ArrayList;
 
-public class Controller {
+public class ControllerAluno {
 
-    private static Controller instancia;
+    private static ControllerAluno instancia;
 
     private static ArrayList<Aluno> listAlunos;
 
     // Garante que seja criado apenas uma instância da classe global
-    public static Controller getInstance() {
+    public static ControllerAluno getInstance() {
         if (instancia == null)
-            return instancia = new Controller();
+            return instancia = new ControllerAluno();
         else
             return  instancia;
     }
 
     // Cria o array list da classe
-    private Controller(){
+    private ControllerAluno(){
         listAlunos = new ArrayList<>();
     }
 

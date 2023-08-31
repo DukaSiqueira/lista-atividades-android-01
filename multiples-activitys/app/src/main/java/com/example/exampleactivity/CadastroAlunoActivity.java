@@ -71,7 +71,7 @@ public class CadastroAlunoActivity extends AppCompatActivity {
         aluno.setCpf(edCpf.getText().toString());
         aluno.setDataNascimento(edDataNascimento.getText().toString());
 
-        Controller.getInstance().salvarAluno(aluno);
+        ControllerAluno.getInstance().salvarAluno(aluno);
 
         Toast.makeText(this, "Aluno cadastrado com sucesso", Toast.LENGTH_SHORT).show();
 
@@ -81,7 +81,7 @@ public class CadastroAlunoActivity extends AppCompatActivity {
     private void atualizarListaAlunos() {
         String texto = "";
 
-        for (Aluno aluno : Controller.getInstance().retornarAlunos()) {
+        for (Aluno aluno : ControllerAluno.getInstance().retornarAlunos()) {
             texto += "R.A.: " + aluno.getRa() + " Nome: " + aluno.getNome() + "\n" +
             " CPF:" + aluno.getCpf() + " Data Nasc.:" + aluno.getDataNascimento() + "\n" +
             "_________________________________" + "\n";
