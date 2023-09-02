@@ -82,8 +82,10 @@ public class CadastroAlunoActivity extends AppCompatActivity {
         String texto = "";
 
         for (Aluno aluno : ControllerAluno.getInstance().retornarAlunos()) {
-            texto += "R.A.: " + aluno.getRa() + " Nome: " + aluno.getNome() + "\n" +
-            " CPF:" + aluno.getCpf() + " Data Nasc.:" + aluno.getDataNascimento() + "\n" +
+            texto += "R.A.: " + aluno.getRa() + "\n" +
+                "Nome: " + aluno.getNome() + "\n" +
+                "CPF:" + aluno.getCpf() + "\n" +
+                "Data Nasc.:" + aluno.getDataNascimento() + "\n" +
             "_________________________________" + "\n";
         }
         tvAlunosCadastrados.setText(texto);

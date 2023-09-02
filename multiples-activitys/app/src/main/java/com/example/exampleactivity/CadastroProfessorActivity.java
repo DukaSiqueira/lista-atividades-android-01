@@ -88,8 +88,10 @@ public class CadastroProfessorActivity extends AppCompatActivity {
         String texto = "";
 
         for (Professor professor : ControllerProfessor.getInstance().retornarProfessores()) {
-            texto += "Matrícula: " + professor.getMatricula() + " Nome: " + professor.getNome() + "\n" +
-                    " CPF:" + professor.getCpf() + " Data Nasc.:" + professor.getDataNascimento() + "\n" +
+            texto += "Matrícula: " + professor.getMatricula() + "\n" +
+                    "Nome: " + professor.getNome() + "\n" +
+                    "CPF:" + professor.getCpf() + "\n" +
+                    "Data Nasc.:" + professor.getDataNascimento() + "\n" +
                     "Data Admissão: " + professor.getDataAdmissao() + "\n" +
                     "_________________________________" + "\n";
         }
