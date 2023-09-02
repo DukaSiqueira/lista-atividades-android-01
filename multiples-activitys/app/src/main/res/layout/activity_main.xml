@@ -44,4 +44,12 @@
             android:id="@+id/btCadastrarProfessor"/>
 
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Cadastrar matéria"
+        android:id="@+id/btCadastrarMateria"/>
+
 </LinearLayout>
