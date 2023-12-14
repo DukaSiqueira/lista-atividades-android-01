@@ -10,7 +10,7 @@ public class Materia {
 
     public Materia() {}
 
-    public Materia(int codDisciplina, String descricao, Double cargaHoraria, Professor professor) {
+    public Materia(String descricao, Double cargaHoraria, Professor professor) {
         this.descricao = descricao;
         this.cargaHoraria = cargaHoraria;
         this.professor = professor;

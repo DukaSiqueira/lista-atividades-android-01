@@ -13,7 +13,7 @@ import com.example.exampleactivity.model.Aluno;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btCadastrarAluno, btCadastrarProfessor, btCadastrarMateria;
+    private Button btCadastrarAluno, btCadastrarProfessor, btCadastrarMateria, btCadastrarTurma;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         btCadastrarAluno = findViewById(R.id.btCadastrarAluno);
         btCadastrarProfessor = findViewById(R.id.btCadastrarProfessor);
         btCadastrarMateria = findViewById(R.id.btCadastrarMateria);
+        btCadastrarTurma = findViewById(R.id.btCadastrarTurma);
 
         btCadastrarAluno.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btCadastrarTurma.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { abrirCadastroTurma(); }
+        });
+
     }
 
     private void abrirCadastroProfessor() {
@@ -57,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void abrirCadastroMateria() {
         Intent intent = new Intent(this, CadastroMateriaActivity.class);
+        startActivity(intent);
+    }
+
+    private void abrirCadastroTurma() {
+        Intent intent = new Intent(this, CadastroTurmaActivity.class);
         startActivity(intent);
     }
 

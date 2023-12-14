@@ -4,9 +4,7 @@ public class Aluno {
 
     private int ra;
     private String nome;
-
     private String cpf;
-
     private String dataNascimento;
 
     public Aluno() {}
